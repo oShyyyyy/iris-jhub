@@ -1,0 +1,26 @@
+local library = loadstring(game:HttpGet("https://pastebin.com/raw/HYcfs6KC", true))()
+library.options.underlinecolor = "rainbow"
+library.options.titlefont = "SciFi"
+library.options.font = "SourceSansSemibold"
+local w = library:CreateWindow('eprx#9921')
+
+w:Button('Unlimited Cash', function() 
+local A_1 = math.huge
+local Event = game:GetService("ReplicatedStorage").PlayerMoneyUpdate[game.Players.LocalPlayer.Name]
+Event:FireServer(A_1)
+end)
+
+w:Toggle('Buy Everything', {flag = "toggle1"}) 
+spawn(function()
+while wait() do
+    if w.flags.toggle1 then
+		if game.Players.LocalPlayer.Character:WaitForChild("Humanoid") then
+for i,v in pairs(game:GetService("Workspace").Camera:GetChildren()) do 
+	local A_1 = v.Name
+local Event = game:GetService("ReplicatedStorage").Events.Purchase
+Event:InvokeServer(A_1)
+end
+	end
+	end
+	end
+end)
