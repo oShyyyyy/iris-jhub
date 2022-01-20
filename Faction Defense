@@ -2,7 +2,7 @@ local library = loadstring(game:HttpGet("https://pastebin.com/raw/HYcfs6KC", tru
 library.options.underlinecolor = "rainbow"
 library.options.titlefont = "SciFi"
 library.options.font = "SourceSansSemibold"
-local w = library:CreateWindow('eprx#9921')
+local w = library:CreateWindow('oShy#0001')
 
 w:Button('Unlimited Cash', function() 
 local A_1 = math.huge
